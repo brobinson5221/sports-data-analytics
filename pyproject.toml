@@ -1,0 +1,58 @@
+[project]
+name = "sports-data-analytics"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["matplotlib>=3.11.2", "pandas>=3.0.6"]
+
+[dependency-groups]
+dev = [
+    "commitizen>=4.19.2",
+    "ipykernel>=7.4.0",
+    "pre-commit>=4.7.0",
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 100
+include = ["*.py", "*.ipynb"]
+exclude = [
+    ".venv",
+    "__pycache__",
+    ".ruff_cache",
+    "build",
+    "dist",
+    ".git",
+    ".github",
+    ".vscode",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "T201",
+    "W292",
+    "ANN001",
+    "ANN002",
+    "ANN201",
+    "ANN202",
+    "ANN204",
+    "ERA001",
+    "CPY001",
+    "PLR2004",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
